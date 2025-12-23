@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: pod
+metadata:
+  - name: nginx
+    Namespace: expense
+spec:
+# one pod can contain multiple contaniers
+  containers:
+    - name: nginx
+      image: nginx
