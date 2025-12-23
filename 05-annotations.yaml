@@ -5,6 +5,8 @@ metadata:
   annotations:
     buildURL: "https://jenkins.com/expense/job/backend/23"
     imageregistry: "https://hub.docker.com/"
+    description: "This pod runs nginx"
+    owner: "dev-team"
 spec:
   containers:
   - name: nginx
