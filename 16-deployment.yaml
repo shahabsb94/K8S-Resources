@@ -23,23 +23,23 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.14.2
-        # image: joindevops/deployment:2.0
+        # image: nginx:1.14.2
+        image: shahabsb/deployment:1.0
         ports:
         - containerPort: 80
 ---
-# kind: Service
-# apiVersion: v1
-# metadata:
-#   name: nginx
-# spec:
-#   type: LoadBalancer
-#   selector: # labels are used as selectors
-#     app: nginx
-#     tier: frontend
-#     purpose: deployment
-#   ports:
-#   - protocol: TCP
-#     port: 80 # service port
-#     targetPort: 80
-#     nodePort: 30007
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx
+spec:
+  type: LoadBalancer
+  selector: # labels are used as selectors
+    app: nginx
+    tier: frontend
+    purpose: deployment
+  ports:
+  - protocol: TCP
+    port: 80 # service port
+    targetPort: 80
+    nodePort: 30010
